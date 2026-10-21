@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+.animated-name {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #a5f3fc,
+    #67e8f9,
+    #22d3ee
+  );
+  background-size: 250% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: nameGradient 4s linear infinite;
+}
+
+@keyframes nameGradient {
+  to {
+    background-position: 250% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-name {
+    animation: none;
+    background-position: center;
+  }
+}
